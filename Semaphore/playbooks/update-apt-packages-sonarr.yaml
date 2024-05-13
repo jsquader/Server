@@ -3,9 +3,8 @@
 
   become: true
   tasks:
-    - name: ssh into container
-      command: lxc-attach -n 102
-      
+    - name: ssh into sonarr container
+      ansible.builtin.shell: lxc-attach -n 102
     - name: update apt packages
       apt:
         upgrade: yes
