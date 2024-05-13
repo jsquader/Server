@@ -4,7 +4,7 @@
   become: true
   tasks:
     - name: ssh into sonarr container
-      lxc_container: lxc-attach -n 102
+      shell: lxc-attach -n 102
     - name: update apt packages
       apt:
         upgrade: yes
