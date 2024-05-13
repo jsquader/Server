@@ -7,5 +7,5 @@
       shell: lxc-attach -n 102
     - name: update apt packages
       apt:
-        upgrade: yes
+        upgrade: no
         update_cache: yes
