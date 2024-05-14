@@ -4,7 +4,10 @@
   become: true
   tasks:
     - name: ssh into sonarr container
-      shell: lxc-attach -n 102 && apt update && apt upgrade -y
+      shell: lxc-attach -n 102
+      
+    - name: update apt packages
+      shell: touch /lol.txt #apt update && apt upgrade -y
     #- name: update apt packages
       #apt:
         #upgrade: no
